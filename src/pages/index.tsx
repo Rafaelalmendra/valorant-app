@@ -7,7 +7,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <h1>Teste</h1>
     </>
   );
 };

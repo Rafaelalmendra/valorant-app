@@ -18,10 +18,14 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  body {
+    background: var(--white);
+  }
+
   html, body, textarea, button {
     font-family: 'Archivo', sans-serif;
-    border: none;
     -webkit-font-smoothing: antialiased;
+    border: none;
 
     &:focus {
       border: 0 none;
