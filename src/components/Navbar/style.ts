@@ -6,6 +6,10 @@ export const Container = styled.nav`
   width: 24.25rem;
   height: 100vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background: var(--black-2);
   color: var(--white);
 `

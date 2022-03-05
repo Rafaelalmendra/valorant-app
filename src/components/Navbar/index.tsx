@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Links from './Links';
+import Credits from './Credits';
 import {
   Container,
   LogoContainer,
@@ -21,6 +23,10 @@ export default function Navbar() {
           </a>
         </Link>
       </LogoContainer>
+
+      <Links />
+
+      <Credits />
     </Container>
   );
 };
