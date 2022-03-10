@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Home, Users, Map, Package, AlertCircle, } from 'react-feather';
 
 export const linksUrl = [
@@ -21,12 +22,18 @@ export const linksUrl = [
   },
   {
     id: 4,
+    name: 'Armas',
+    icon: <img src="/images/Armor.svg" alt="Armor SVG icon" />,
+    url: '/armas',
+  },
+  {
+    id: 5,
     name: 'Sprays',
     icon: <Package />,
     url: '/sprays',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Sobre',
     icon: <AlertCircle />,
     url: '/sobre',

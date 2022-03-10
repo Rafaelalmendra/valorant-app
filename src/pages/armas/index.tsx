@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-export default function Sprays() {
+export default function Armas() {
   return (
     <>
       <Head>
-        <title>Valorant Guide | Sprays</title>
+        <title>Valorant Guide | Armas</title>
       </Head>
       <h1>hello</h1>
     </>

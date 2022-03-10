@@ -37,5 +37,6 @@ export const Li = styled.li<ContainerProps>`
 
   img {
     max-width: 23px;
+    filter: ${props => props.active ? "invert(1) sepia(1) saturate(65) hue-rotate(9deg)" : "none"};
   }
 `
