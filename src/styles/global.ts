@@ -41,4 +41,8 @@ export default createGlobalStyle`
     all: unset;
     cursor: pointer;
   }
+
+  ul li {
+    list-style: none;
+  }
 `
