@@ -36,7 +36,7 @@ export const Li = styled.li<ContainerProps>`
   color: ${props => props.active ? "var(--red)" : "var(--white)"};
 
   img {
-    max-width: 23px;
+    max-width: 24px;
     filter: ${props => props.active ? "invert(1) sepia(1) saturate(65) hue-rotate(9deg)" : "none"};
   }
 `

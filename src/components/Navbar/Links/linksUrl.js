@@ -23,7 +23,7 @@ export const linksUrl = [
   {
     id: 4,
     name: 'Armas',
-    icon: <img src="/images/Armor.svg" alt="Armor SVG icon" />,
+    icon: <img src="/images/armor.svg" alt="Armor SVG icon" />,
     url: '/armas',
   },
   {
