@@ -45,4 +45,13 @@ export default createGlobalStyle`
   ul li {
     list-style: none;
   }
+
+  .margin {
+    margin: 0 4.375rem 0 4.375rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--black);
+  }
 `

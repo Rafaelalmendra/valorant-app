@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import 'swiper/swiper.scss';
+import 'swiper/swiper-bundle.css';
 
 import GlobalStyle from '../styles/global';
 import Navbar from '../components/Navbar';
