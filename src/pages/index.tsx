@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <title>Valorant Guide | Home</title>
       </Head>
 
-      <Container>
+      <Container className="margin">
         <div data-aos="fade-up">
           <img src="/images/logo.svg" alt="Logo principal" className="logo" />
         </div>

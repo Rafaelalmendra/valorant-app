@@ -18,7 +18,7 @@ export default function Agent({
  }: AgentProps) {
 
   return (
-    <Container>
+    <Container className="margin">
       <div>
         <img 
           className="agent"
