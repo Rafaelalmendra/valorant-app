@@ -1,25 +1,45 @@
 /* eslint-disable @next/next/no-img-element */
-import {
-  Container,
-  Infos
-} from './style';
+import { Container, Infos } from './style';
 
-export default function Agent() {
+interface AgentProps {
+  image: string;
+  background: string;
+  name: string;
+  role: string;
+  description: string;
+}
+
+export default function Agent({ 
+  image, 
+  background, 
+  name, 
+  role, 
+  description
+ }: AgentProps) {
+
   return (
     <Container>
       <div>
-        <img src="/images/agent-test.svg" alt="teste" />
+        <img 
+          className="agent"
+          src={image} 
+          alt={`Agent image ${name}`} 
+        />
+
+        <img 
+          className="background"
+          src={background} 
+          alt={`Agent background ${name}`}
+        />
       </div>
 
       <Infos>
-        <h2>BRIMSTONE</h2>
+        <h2>{name}</h2>
         <div className="divider"></div>
-        <p className="subtitle">FUNÇÃO</p>
-        <p>CONTROLADOR</p>
-        <p className="subtitle">BIOGRAFIA</p>
-        <p>
-          Vindo diretamente dos EUA, o arsenal orbital de Brimstone garante que o esquadrão dele esteja sempre em vantagem. Sua capacidade de oferecer utilidade com precisão a distância faz dele um comandante inigualável na linha de frente.
-        </p>
+        <p className="subtitle">função</p>
+        <p>{role}</p>
+        <p className="subtitle">biografia</p>
+        <p>{description}</p>
       </Infos>
     </Container>
   );
