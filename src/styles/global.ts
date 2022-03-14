@@ -47,12 +47,18 @@ export default createGlobalStyle`
   }
 
   .margin {
-    margin: 0 4.375rem 0 4.375rem;
+    margin: 0 4rem 0 4rem;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     color: var(--black);
+    width: 3rem;
+    height: 3rem;
+
+    &:hover {
+      color: var(--red);
+    }
   }
 
   //loading

@@ -7,7 +7,7 @@ interface AgentProps {
   name: string;
   role: string;
   description: string;
-}
+};
 
 export default function Agent({ 
   image, 

@@ -16,7 +16,7 @@ interface AgentInfo {
   role: {
     displayName: string;
   }
-}
+};
 
 export default function Agentes() {
   const [ isFetching, setIsFetching ] = useState(true);
@@ -36,8 +36,8 @@ export default function Agentes() {
         console.log(response.error);
       }).finally(() => {
         setIsFetching(false);
-      })
-  }, [])
+      });
+  }, []);
 
   return (
     <>
@@ -47,7 +47,12 @@ export default function Agentes() {
       
       {isFetching && (
         <div className="loading">
-          <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          <div className="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       )}
 
