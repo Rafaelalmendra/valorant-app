@@ -1,14 +1,14 @@
-import Card from '../Card';
-import AgentImage from '../AgentImage';
+import AgentImage from './AgentImage';
+import { Card } from '../Card';
 import { CardInfos } from './style';
 import { Title, Divider, Subtitle, P } from '../../components/Typography';
 
 interface AgentCardProps {
-  avatar: string;
-  background: string;
   name: string;
   role: string;
   description: string;
+  avatar: string;
+  background: string;
 };
 
 const AgentCard = ({ avatar, background, name, role, description }: AgentCardProps) => (

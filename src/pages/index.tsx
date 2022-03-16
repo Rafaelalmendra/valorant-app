@@ -1,29 +1,19 @@
-/* eslint-disable @next/next/no-img-element */
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
+import type { NextPage } from 'next';
+import { Card } from '../components/Card';
 
-import {
-  Container,
-
-} from '../styles/index';
-
-const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Valorant Guide | Home</title>
-      </Head>
-
-      <Container className="margin">
-        <div data-aos="fade-up">
-          <img src="/images/logo.svg" alt="Logo principal" className="logo" />
-        </div>
-        <div data-aos="fade-left">
-          <img src="/images/jett.svg" alt="Jett imagem" className="jett" />
-        </div>
-      </Container>
-    </>
-  );
-};
+const Home: NextPage = () => (
+  <Card>
+    <Head><title>Valorant Guide | Home</title></Head>
+    <Image data-aos="fade-up" 
+      src={'/images/logo.svg'} alt={'Logo'} width={466} height={466} 
+    />
+    <Image 
+      data-aos="fade-left" 
+      src={'/images/jett.svg'} alt={'Jett imagem'} width={466} height={600} 
+    />
+  </Card>
+);
 
 export default Home;

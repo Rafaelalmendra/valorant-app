@@ -1,7 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
 import { Home, Users, Map, Package, AlertCircle, } from 'react-feather';
 
-export const linksUrl = [
+interface linksUrlProps {
+  name: string,
+  id: number,
+  icon: any,
+  url: string,
+};
+
+export const linksUrl: linksUrlProps[] = [
   {
     id: 1,
     name: 'Home',
