@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const CardInfos = styled.div`
+export const CardInfos = styled.main`
   max-width: 23rem;
-`
-
-export const Images = styled.div`
-
 `

@@ -1,8 +1,9 @@
 import Card from '../Card';
-import { CardInfos, Images } from './style';
+import AgentImage from '../AgentImage';
+import { CardInfos } from './style';
 import { Title, Divider, Subtitle, P } from '../../components/Typography';
 
-interface AgentProps {
+interface AgentCardProps {
   avatar: string;
   background: string;
   name: string;
@@ -10,12 +11,9 @@ interface AgentProps {
   description: string;
 };
 
-const AgentCard = ({ avatar, background, name, role, description }: AgentProps) => (
+const AgentCard = ({ avatar, background, name, role, description }: AgentCardProps) => (
   <Card>
-    <Images>
-      <img className="agent" src={avatar} alt={`${name}`} />
-      <img className="background" src={background} alt={`${name}`} />
-    </Images>
+    <AgentImage avatar={avatar} background={background} name={name} />
     <CardInfos>
       <Title>{name}</Title>
       <Divider />

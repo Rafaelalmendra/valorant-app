@@ -10,7 +10,7 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.p`
-  margin-bottom: 0.875rem;
+  margin: 0.875rem 0;
 
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
