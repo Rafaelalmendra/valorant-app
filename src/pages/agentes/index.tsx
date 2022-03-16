@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 
 import api from '../../lib/api';
-import Agent from '../../components/Agent';
+import AgentCard from '../../components/AgentCard';
 SwiperCore.use([Navigation]);
 
 interface AgentInfo {
@@ -63,8 +63,8 @@ export default function Agentes() {
       >
         {agent?.map((agent: AgentInfo) => (
           <SwiperSlide key={agent.uuid}>
-            <Agent 
-              image={agent.fullPortrait}
+            <AgentCard 
+              avatar={agent.fullPortrait}
               background={agent.background}
               name={agent.displayName}
               role={agent.role?.displayName}

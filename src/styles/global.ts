@@ -46,8 +46,22 @@ export default createGlobalStyle`
     list-style: none;
   }
 
-  .margin {
-    margin: 0 4rem 0 4rem;
+  img {
+    width: 100%;
+  }
+
+  //delete later
+  .agent {
+    width: 525px;
+    height: 800px;
+    object-fit: cover;
+  }
+
+  .background {
+    position: absolute;
+    z-index: -1;
+    left: 80px;
+    width: 30%;
   }
 
   .swiper-button-next,
