@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import type { NextPage } from 'next';
-import { Card } from '../components/Card';
+import { Card } from 'components/Card';
 
 const Home: NextPage = () => (
   <Card>

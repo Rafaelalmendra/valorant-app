@@ -28,9 +28,9 @@ export const linksUrl: linksUrlProps[] = [
   },
   {
     id: 4,
-    name: 'Armas',
+    name: 'Arsenal',
     icon: <img src="/images/armor.svg" alt="Armor SVG icon" />,
-    url: '/armas',
+    url: '/arsenal',
   },
   {
     id: 5,

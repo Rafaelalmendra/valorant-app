@@ -4,18 +4,16 @@ export const Title = styled.h1`
   font-family: 'Rubik', sans-serif;
   font-size: 4rem;
   font-weight: 600;
-
-  color: var(--red);
   text-transform: uppercase;
+
+  color: var(--white);
 `
 
 export const Subtitle = styled.p`
   margin: 0.875rem 0;
-
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-
   text-transform: uppercase;
 `
 
@@ -27,7 +25,6 @@ export const Divider = styled.div`
 
 export const P = styled.div`
   margin-top: 0.875rem;
-
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 500;

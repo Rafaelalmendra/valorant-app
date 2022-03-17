@@ -5,9 +5,9 @@ import 'aos/dist/aos.css';
 import 'swiper/swiper.scss';
 import 'swiper/swiper-bundle.css';
 
-import { Layout } from '../components/Layout';
-import GlobalStyle from '../styles/global';
-import Navbar from '../components/Navbar';
+import { Layout } from 'components/Layout';
+import GlobalStyle from 'styles/global';
+import Navbar from 'components/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

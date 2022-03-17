@@ -1,7 +1,7 @@
 import AgentImage from './AgentImage';
 import { Card } from '../Card';
 import { CardInfos } from './style';
-import { Title, Divider, Subtitle, P } from '../../components/Typography';
+import { Title, Divider, Subtitle, P } from 'components/Typography';
 
 interface AgentCardProps {
   name: string;
@@ -15,7 +15,7 @@ const AgentCard = ({ avatar, background, name, role, description }: AgentCardPro
   <Card>
     <AgentImage avatar={avatar} background={background} name={name} />
     <CardInfos>
-      <Title>{name}</Title>
+      <Title style={{ color: '#FF4655' }}>{name}</Title>
       <Divider />
       <Subtitle>função</Subtitle>
       <P>{role}</P>

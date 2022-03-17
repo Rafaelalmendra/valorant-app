@@ -50,12 +50,6 @@ export default createGlobalStyle`
       color: var(--red);
     }
   }
-  .loading {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .lds-ellipsis {
     display: inline-block;
     position: relative;
