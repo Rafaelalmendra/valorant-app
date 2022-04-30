@@ -2,10 +2,12 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
+SwiperCore.use([Navigation]);
 import api from "lib/api";
+
+//components
 import AgentCard from "components/AgentCard";
 import Loading from "components/Loading";
-SwiperCore.use([Navigation]);
 
 interface AgentInfo {
   uuid: string;

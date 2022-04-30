@@ -5,6 +5,7 @@ import { Divider, Title } from "@/components/Typography";
 import api from "lib/api";
 import Loading from "components/Loading";
 import WeaponCard from "@/components/WeaponCard";
+import Modal from "@/components/Modal";
 
 interface WeaponInfoProps {
   displayName: string;
@@ -18,6 +19,7 @@ interface WeaponInfoProps {
 const Arsenal = () => {
   const [weapons, setWeapons] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
+  const [modal, setModal] = useState(false);
   useEffect(() => {
     api
       .get("/weapons", {
@@ -49,15 +51,23 @@ const Arsenal = () => {
         <Divider style={{ width: "50%" }} />
         <WeaponsContainer>
           {weapons?.map((weapon: WeaponInfoProps) => (
-            <WeaponCard
-              title={weapon.displayName}
-              weaponImage={weapon.displayIcon}
-              price={weapon.shopData?.cost}
-              category={weapon.shopData?.categoryText}
-            />
+            <div onClick={() => setModal(true)}>
+              <WeaponCard
+                title={weapon.displayName}
+                weaponImage={weapon.displayIcon}
+                price={weapon.shopData?.cost}
+                category={weapon.shopData?.categoryText}
+              />
+            </div>
           ))}
         </WeaponsContainer>
       </Card>
+
+      {modal ? (
+        <Modal title="skins" onClose={() => setModal(false)}>
+          <h1>teste</h1>
+        </Modal>
+      ) : null}
     </>
   );
 };

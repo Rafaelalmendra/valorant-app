@@ -1,47 +1,47 @@
-import { Home, Users, Map, Package, AlertCircle, } from 'react-feather';
+import { Home, Users, Map, Package, AlertCircle } from "react-feather";
 
 interface linksUrlProps {
-  name: string,
-  id: number,
-  icon: any,
-  url: string,
-};
+  name: string;
+  id: number;
+  icon: any;
+  url: string;
+}
 
 export const linksUrl: linksUrlProps[] = [
   {
     id: 1,
-    name: 'Home',
+    name: "Home",
     icon: <Home />,
-    url: '/',
+    url: "/",
   },
   {
     id: 2,
-    name: 'Agentes',
+    name: "Agentes",
     icon: <Users />,
-    url: '/agentes',
+    url: "/Agentes",
   },
   {
     id: 3,
-    name: 'Mapas',
+    name: "Mapas",
     icon: <Map />,
-    url: '/mapas',
+    url: "/Mapas",
   },
   {
     id: 4,
-    name: 'Arsenal',
+    name: "Arsenal",
     icon: <img src="/images/armor.svg" alt="Armor SVG icon" />,
-    url: '/arsenal',
+    url: "/Arsenal",
   },
   {
     id: 5,
-    name: 'Sprays',
+    name: "Sprays",
     icon: <Package />,
-    url: '/sprays',
+    url: "/Sprays",
   },
   {
     id: 6,
-    name: 'Sobre',
+    name: "Sobre",
     icon: <AlertCircle />,
-    url: '/sobre',
+    url: "/Sobre",
   },
 ];
