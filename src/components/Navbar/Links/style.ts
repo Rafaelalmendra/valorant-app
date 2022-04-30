@@ -12,9 +12,11 @@ export const LinksContainer = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
   a:first-child {
     margin-bottom: 2rem;
   }
+
   a:last-child {
     margin-top: 2rem;
   }

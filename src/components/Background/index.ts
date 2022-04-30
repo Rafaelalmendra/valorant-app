@@ -6,4 +6,4 @@ export const Background = styled.div`
   background-attachment: fixed;
   background-size: cover;
   background: var(--black);
-`
+`;

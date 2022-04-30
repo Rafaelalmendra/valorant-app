@@ -10,7 +10,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   background: var(--black-2);
   color: var(--white);
-`
+
+  @media (max-width: 1366px) {
+    width: 16rem;
+  }
+`;
 
 export const Logo = styled.div`
   display: flex;
@@ -21,7 +25,7 @@ export const Logo = styled.div`
   img {
     max-width: 184px;
   }
-`
+`;
 
 export const GuideTitle = styled.div`
   display: flex;
@@ -37,4 +41,4 @@ export const GuideTitle = styled.div`
     height: 2px;
     background: var(--white);
   }
-`
+`;

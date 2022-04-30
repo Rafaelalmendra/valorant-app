@@ -8,6 +8,11 @@ const Images = styled.div`
     width: 32.8125rem;
     height: 50rem;
     object-fit: cover;
+
+    @media (max-width: 1366px) {
+      width: 26rem;
+      height: 44rem;
+    }
   }
 
   img:last-child {
