@@ -2,17 +2,21 @@ import styled from "styled-components";
 
 const Images = styled.div`
   img:first-child {
-    width: 525px;
-    height: 800px;
+    position: relative;
+    z-index: 2;
+
+    width: 32.8125rem;
+    height: 50rem;
     object-fit: cover;
   }
 
   img:last-child {
     position: absolute;
-    z-index: -1;
-    left: 80px;
+    z-index: 1;
+
     width: 30%;
+    left: 5rem;
   }
-`
+`;
 
 export default Images;

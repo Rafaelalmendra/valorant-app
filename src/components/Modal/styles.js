@@ -4,7 +4,7 @@ export const ModalCard = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 10;
+  z-index: 100;
   transform: translate(-50%, -50%);
 
   width: 60rem;
@@ -15,7 +15,6 @@ export const ModalCard = styled.div`
 
   background: #fafafa;
   border-radius: 8px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
 `;
 
 export const Header = styled.div`
@@ -25,11 +24,17 @@ export const Header = styled.div`
   align-items: center;
   width: 100%;
 
-  h1 {
+  p {
     font-family: "Rubik", sans-serif;
     font-size: 1.475rem;
+    font-weight: 400;
     color: var(--black-2);
     text-transform: uppercase;
+
+    strong {
+      color: var(--red);
+      font-weight: 600;
+    }
   }
 
   svg {
@@ -37,8 +42,18 @@ export const Header = styled.div`
   }
 `;
 
+export const Content = styled.div`
+  width: 100%;
+  padding: 1rem;
+
+  img {
+    width: 450px;
+  }
+`;
+
 export const DarkBackground = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--black);
+  opacity: 0.04;
   width: 100%;
   height: 100%;
   z-index: 0;

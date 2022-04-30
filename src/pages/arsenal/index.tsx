@@ -1,11 +1,18 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
-import { Card, WeaponsContainer } from "styles/weapons";
-import { Divider, Title } from "@/components/Typography";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+import Head from "next/head";
 import api from "lib/api";
-import Loading from "components/Loading";
+SwiperCore.use([Navigation]);
+
+//components
+import { Divider, Title } from "@/components/Typography";
 import WeaponCard from "@/components/WeaponCard";
+import Loading from "components/Loading";
 import Modal from "@/components/Modal";
+
+//styles
+import { Card, WeaponsContainer, SkinContainer } from "styles/weapons";
 
 interface WeaponInfoProps {
   displayName: string;
@@ -14,6 +21,7 @@ interface WeaponInfoProps {
     cost?: number;
     categoryText: string;
   };
+  skins: any;
 }
 
 const Arsenal = () => {
@@ -32,7 +40,7 @@ const Arsenal = () => {
         console.log(reponse.data.data);
       })
       .catch((response) => {
-        console.log(response.error);
+        console.error(response.error);
       })
       .finally(() => {
         setIsFetching(false);
@@ -51,23 +59,20 @@ const Arsenal = () => {
         <Divider style={{ width: "50%" }} />
         <WeaponsContainer>
           {weapons?.map((weapon: WeaponInfoProps) => (
-            <div onClick={() => setModal(true)}>
-              <WeaponCard
-                title={weapon.displayName}
-                weaponImage={weapon.displayIcon}
-                price={weapon.shopData?.cost}
-                category={weapon.shopData?.categoryText}
-              />
-            </div>
+            <>
+              <div onClick={() => setModal(true)}>
+                <WeaponCard
+                  title={weapon.displayName}
+                  weaponImage={weapon.displayIcon}
+                  price={weapon.shopData?.cost}
+                  category={weapon.shopData?.categoryText}
+                  skinsImage={weapon.skins[0].displayIcon}
+                />
+              </div>
+            </>
           ))}
         </WeaponsContainer>
       </Card>
-
-      {modal ? (
-        <Modal title="skins" onClose={() => setModal(false)}>
-          <h1>teste</h1>
-        </Modal>
-      ) : null}
     </>
   );
 };

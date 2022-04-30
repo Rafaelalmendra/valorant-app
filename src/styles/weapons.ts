@@ -20,3 +20,12 @@ export const WeaponsContainer = styled.div`
   flex-wrap: wrap;
   margin-bottom: 5rem;
 `;
+
+export const SkinContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.6875rem;
+`;

@@ -56,3 +56,15 @@ export const PriceAndCategory = styled.div`
   align-items: center;
   justify-content: center;
 `;
+export const SkinContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+
+  img {
+    margin-bottom: 3.5rem;
+  }
+`;

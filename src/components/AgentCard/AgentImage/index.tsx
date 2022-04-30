@@ -9,7 +9,7 @@ interface AgentImageProps {
 const AgentImage = ({ avatar, background, name }: AgentImageProps) => (
   <Images>
     <img src={avatar} alt={`${name}`} />
-    <img src={background} alt={`${name}`} />
+    <img src={background} alt="" />
   </Images>
 );
 

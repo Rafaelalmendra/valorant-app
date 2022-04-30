@@ -1,8 +1,8 @@
-import { useState } from "react";
+//icons
 import { X } from "react-feather";
 
 //styles
-import { ModalCard, Header, DarkBackground } from "./styles";
+import { ModalCard, Header, Content, DarkBackground } from "./styles";
 
 //types
 interface ModalProps {
@@ -17,10 +17,12 @@ const Modal = ({ title, children, onClose }: ModalProps) => {
       <DarkBackground />
       <ModalCard>
         <Header>
-          <h1>{title}</h1>
+          <p>
+            skins <strong>{title}</strong>
+          </p>
           <X onClick={onClose} />
         </Header>
-        {children}
+        <Content>{children}</Content>
       </ModalCard>
     </>
   );
