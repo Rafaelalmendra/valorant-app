@@ -1,8 +1,8 @@
-import Images from './style';
+import Images from "./style";
 
 interface AgentImageProps {
   avatar: string;
-  background: string;
+  background?: string;
   name: string;
 }
 

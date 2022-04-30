@@ -18,4 +18,4 @@ export const Background = styled.div`
 
     filter: brightness(0.8);
   }
-`
+`;

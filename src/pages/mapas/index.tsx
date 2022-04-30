@@ -1,25 +1,25 @@
 import Head from "next/head";
-import api from '../../lib/api';
-import { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
-import { Background } from '../../styles/maps';
+import { useState, useEffect } from "react";
+import SwiperCore, { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Background } from "../../styles/maps";
 import { Divider, Title } from "components/Typography";
-import Loading from 'components/Loading';
+import api from "../../lib/api";
+import Loading from "components/Loading";
 SwiperCore.use([Navigation]);
 
 interface MapProps {
   splash: string;
   displayName: string;
   uuid: string;
-};
+}
 
 const Mapas = () => {
-  const [ maps, setMaps ] = useState([]);
-  const [ isFetching, setIsFetching ] = useState(true);
-
+  const [maps, setMaps] = useState([]);
+  const [isFetching, setIsFetching] = useState(true);
   useEffect(() => {
-    api.get('/maps')
+    api
+      .get("/maps")
       .then((response) => {
         setMaps(response.data.data);
         console.log(response.data.data);
@@ -29,21 +29,20 @@ const Mapas = () => {
       })
       .finally(() => {
         setIsFetching(false);
-      })
+      });
   }, []);
-
   return (
     <>
-      <Head><title>Valorant Guide | Mapas</title></Head>
-
+      <Head>
+        <title>Valorant Guide | Mapas</title>
+      </Head>
       {isFetching && <Loading />}
-
       <Swiper navigation loop>
         {maps.map((map: MapProps) => (
           <SwiperSlide key={map.uuid}>
             <Background>
               <Title>{map.displayName}</Title>
-              <Divider style={{ width: '348px' }}/>
+              <Divider style={{ width: "21.75rem" }} />
               <img src={map.splash} alt="" />
             </Background>
           </SwiperSlide>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Sobre() {
+const Sobre = () => {
   return (
     <>
       <Head>
@@ -10,3 +10,5 @@ export default function Sobre() {
     </>
   );
 };
+
+export default Sobre;
