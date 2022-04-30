@@ -1,4 +1,4 @@
-import { Home, Users, Map, Package, AlertCircle } from "react-feather";
+import { Home, Users, Map, Package, AlertCircle, Shield } from "react-feather";
 
 interface linksUrlProps {
   name: string;
@@ -29,7 +29,7 @@ export const linksUrl: linksUrlProps[] = [
   {
     id: 4,
     name: "Arsenal",
-    icon: <img src="/images/armor.svg" alt="Armor SVG icon" />,
+    icon: <Shield />,
     url: "/arsenal",
   },
   {

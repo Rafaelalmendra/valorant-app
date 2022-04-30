@@ -18,16 +18,12 @@ export const LinksContainer = styled.ul`
   a:last-child {
     margin-top: 2rem;
   }
-`
+`;
 
 export const Li = styled.li<ContainerProps>`
   display: flex;
   align-items: center;
   gap: 0.6rem;
   font-size: 1rem;
-  color: ${props => props.active ? "var(--red)" : "var(--white)"};
-  img {
-    max-width: 24px;
-    filter: ${props => props.active ? "invert(1) sepia(1) saturate(65) hue-rotate(9deg)" : "none"};
-  }
-`
+  color: ${(props) => (props.active ? "var(--red)" : "var(--white)")};
+`;
