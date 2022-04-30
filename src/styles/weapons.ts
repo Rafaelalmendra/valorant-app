@@ -19,6 +19,10 @@ export const WeaponsContainer = styled.div`
   width: 70%;
   flex-wrap: wrap;
   margin-bottom: 5rem;
+
+  @media (max-width: 1366px) {
+    width: 90%;
+  }
 `;
 
 export const SkinContainer = styled.div`
