@@ -62,9 +62,37 @@ export const SkinContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 6rem;
 
+  p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: var(--black-2);
+    text-transform: uppercase;
+  }
+`;
+export const SkinContainerPistols = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2.5rem;
+
+  p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: var(--black-2);
+    text-transform: uppercase;
+  }
+
   img {
-    margin-bottom: 3.5rem;
+    max-width: 20rem;
   }
 `;

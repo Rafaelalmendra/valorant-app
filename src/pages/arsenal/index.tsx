@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
 import Head from "next/head";
 import api from "lib/api";
-SwiperCore.use([Navigation]);
 
 //components
 import { Divider, Title } from "@/components/Typography";
 import WeaponCard from "@/components/WeaponCard";
 import Loading from "components/Loading";
-import Modal from "@/components/Modal";
 
 //styles
-import { Card, WeaponsContainer, SkinContainer } from "styles/weapons";
+import { Card, WeaponsContainer } from "styles/weapons";
 
 interface WeaponInfoProps {
   displayName: string;
@@ -28,6 +24,7 @@ const Arsenal = () => {
   const [weapons, setWeapons] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
   const [modal, setModal] = useState(false);
+
   useEffect(() => {
     api
       .get("/weapons", {
@@ -37,7 +34,6 @@ const Arsenal = () => {
       })
       .then((reponse) => {
         setWeapons(reponse.data.data);
-        console.log(reponse.data.data);
       })
       .catch((response) => {
         console.error(response.error);
@@ -46,6 +42,7 @@ const Arsenal = () => {
         setIsFetching(false);
       });
   }, []);
+
   return (
     <>
       <Head>
@@ -66,7 +63,7 @@ const Arsenal = () => {
                   weaponImage={weapon.displayIcon}
                   price={weapon.shopData?.cost}
                   category={weapon.shopData?.categoryText}
-                  skinsImage={weapon.skins[0].displayIcon}
+                  skinsImage={weapon.skins}
                 />
               </div>
             </>

@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
@@ -14,6 +14,7 @@ import {
   CardInfos,
   PriceAndCategory,
   SkinContainer,
+  SkinContainerPistols,
 } from "./style";
 
 //types
@@ -22,7 +23,7 @@ interface WeaponCardProps {
   weaponImage: string;
   price?: number;
   category?: string;
-  skinsImage?: string;
+  skinsImage?: any;
   children?: React.ReactNode;
 }
 
@@ -60,11 +61,37 @@ const WeaponCard = ({
       {modal ? (
         <Modal title={title} onClose={() => setModal(false)}>
           <Swiper navigation loop>
-            <SwiperSlide>
-              <SkinContainer>
-                <img src={skinsImage} alt="" />
-              </SkinContainer>
-            </SwiperSlide>
+            {category === "Armas Leves" ? (
+              <>
+                {skinsImage.map((skin: any) => (
+                  <>
+                    {skin.displayIcon && skin.contentTierUuid ? (
+                      <SwiperSlide>
+                        <SkinContainerPistols>
+                          <img src={skin.displayIcon} alt="" />
+                          <p>{skin.displayName}</p>
+                        </SkinContainerPistols>
+                      </SwiperSlide>
+                    ) : null}
+                  </>
+                ))}
+              </>
+            ) : (
+              <>
+                {skinsImage.map((skin: any) => (
+                  <>
+                    {skin.displayIcon && skin.contentTierUuid ? (
+                      <SwiperSlide>
+                        <SkinContainer>
+                          <img src={skin.displayIcon} alt="" />
+                          <p>{skin.displayName}</p>
+                        </SkinContainer>
+                      </SwiperSlide>
+                    ) : null}
+                  </>
+                ))}
+              </>
+            )}
           </Swiper>
         </Modal>
       ) : null}
