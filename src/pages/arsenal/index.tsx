@@ -50,8 +50,14 @@ const Arsenal = () => {
       </Head>
       {isFetching && <Loading />}
       <Card>
-        <Title style={{ color: "var(--black)", marginTop: "6.5625rem" }}>
-          ESCOLHA A SUA ARMA
+        <Title
+          style={{
+            color: "var(--black)",
+            margin: "6.5625rem 0 0.4rem 0",
+            fontSize: "3.2rem",
+          }}
+        >
+          ESCOLHA A ARMA E VEJA A SKIN
         </Title>
         <Divider style={{ width: "50%" }} />
         <WeaponsContainer>
