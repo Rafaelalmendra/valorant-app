@@ -1,13 +1,16 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
+import Head from "next/head";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
+
+//lib
 import api from "lib/api";
 
 //components
-import AgentCard from "components/AgentCard";
 import Loading from "components/Loading";
+import AgentCard from "components/AgentCard";
 
 interface AgentInfo {
   uuid: string;
@@ -23,6 +26,7 @@ interface AgentInfo {
 const Agentes = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [agent, setAgent] = useState([]);
+
   useEffect(() => {
     api
       .get("/agents", {

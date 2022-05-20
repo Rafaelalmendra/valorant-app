@@ -1,18 +1,19 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { linksUrl } from './linksUrl';
-import { LinksContainer, Li } from './style';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { linksUrl } from "./linksUrl";
+import { LinksContainer, Li } from "./style";
 
 const Links = () => {
   const router = useRouter();
+
   return (
     <LinksContainer>
-      {linksUrl.map(link => (
+      {linksUrl.map((link) => (
         <Link href={link.url}>
           <a>
-            <Li 
+            <Li
               key={link.id}
-              active={router.pathname === link.url ? "active" : ""} 
+              active={router.pathname === link.url ? "active" : ""}
             >
               <i>{link.icon}</i>
               <p>{link.name}</p>

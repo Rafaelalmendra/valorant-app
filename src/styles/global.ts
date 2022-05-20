@@ -105,4 +105,4 @@ export default createGlobalStyle`
       transform: translate(24px, 0);
     }
   }
-`
+`;

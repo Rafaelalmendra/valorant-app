@@ -14,4 +14,4 @@ export const CreditsCard = styled.div`
     font-size: 1.25rem;
     font-weight: 500;
   }
-`
+`;

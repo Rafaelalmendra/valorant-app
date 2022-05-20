@@ -1,4 +1,4 @@
-import { LoadingCard } from './style';
+import { LoadingCard } from "./style";
 
 const Loading = () => (
   <LoadingCard>

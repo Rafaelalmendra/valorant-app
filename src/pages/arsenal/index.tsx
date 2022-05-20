@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
+
+//lib
 import api from "lib/api";
 
 //components
-import { Divider, Title } from "@/components/Typography";
-import WeaponCard from "@/components/WeaponCard";
 import Loading from "components/Loading";
+import WeaponCard from "@/components/WeaponCard";
+import { Divider, Title } from "@/components/Typography";
 
 //styles
 import { Card, WeaponsContainer } from "styles/weapons";

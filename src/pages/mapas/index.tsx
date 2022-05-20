@@ -1,12 +1,19 @@
-import Head from "next/head";
 import { useState, useEffect } from "react";
-import SwiperCore, { Navigation } from "swiper";
+import Head from "next/head";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Background } from "../../styles/maps";
-import { Divider, Title } from "components/Typography";
-import api from "../../lib/api";
-import Loading from "components/Loading";
+import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
+
+//lib
+import api from "../../lib/api";
+
+//components
+import { Divider, Title } from "components/Typography";
+import Loading from "components/Loading";
+
+//styles
+import { Background } from "../../styles/maps";
 
 interface MapProps {
   splash: string;
@@ -17,6 +24,7 @@ interface MapProps {
 const Mapas = () => {
   const [maps, setMaps] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
+
   useEffect(() => {
     api
       .get("/maps")
@@ -31,12 +39,15 @@ const Mapas = () => {
         setIsFetching(false);
       });
   }, []);
+
   return (
     <>
       <Head>
         <title>Valorant Guide | Mapas</title>
       </Head>
+
       {isFetching && <Loading />}
+
       <Swiper navigation loop>
         {maps.map((map: MapProps) => (
           <SwiperSlide key={map.uuid}>

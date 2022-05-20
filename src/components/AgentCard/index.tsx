@@ -1,7 +1,7 @@
 //components
-import { Title, Divider, Subtitle, P } from "components/Typography";
-import AgentImage from "./AgentImage";
 import { Card } from "../Card";
+import AgentImage from "./AgentImage";
+import { Title, Divider, Subtitle, P } from "components/Typography";
 
 //styles
 import { CardInfos } from "./style";
