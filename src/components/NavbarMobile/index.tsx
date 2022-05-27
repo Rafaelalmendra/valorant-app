@@ -1,34 +1,26 @@
 import { useState } from "react";
-import Link from "next/link";
 
 //components
+import Logo from "./Logo";
 import Links from "./Links";
-import Credits from "./Credits";
 
 //styles
-import { Nav, Logo, GuideTitle } from "./style";
+import { Nav } from "./style";
+
+//icons
+import { Menu } from "react-feather";
 
 const NavbarMobile = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <Nav>
-        <Logo>
-          <Link href="/">
-            <a>
-              <img src="/images/logo-red-typography.svg" alt="Logo Valorant" />
-              <GuideTitle>
-                {" "}
-                <span></span> <p>guide</p> <span></span>{" "}
-              </GuideTitle>
-            </a>
-          </Link>
-        </Logo>
-        <Credits />
+        <Logo />
+        <Menu onClick={() => setIsOpen(true)} />
       </Nav>
 
-      {isOpen ? <Links /> : null}
+      {isOpen ? <Links onClick={() => setIsOpen(false)} /> : null}
     </>
   );
 };

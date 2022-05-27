@@ -10,13 +10,13 @@ import { LinksContainer, Li, IconClose } from "./style";
 //icons
 import { X } from "react-feather";
 
-const Links = () => {
+const Links = ({ ...props }) => {
   const router = useRouter();
 
   return (
     <LinksContainer>
       <IconClose>
-        <X />
+        <X {...props} />
       </IconClose>
 
       {linksUrl.map((link) => (

@@ -5,7 +5,7 @@ import Head from "next/head";
 import api from "lib/api";
 
 //components
-import Loading from "components/Loading";
+import Loading from "@/components/Loading";
 import WeaponCard from "@/components/WeaponCard";
 import { Divider, Title } from "@/components/Typography";
 

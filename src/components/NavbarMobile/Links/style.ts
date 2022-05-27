@@ -33,4 +33,8 @@ export const Li = styled.li<ContainerProps>`
 
 export const IconClose = styled.div`
   color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem 2rem 0 0;
 `;
