@@ -12,6 +12,7 @@ import { Layout } from "components/Layout";
 
 //styles
 import GlobalStyle from "styles/global";
+import NavbarMobile from "@/components/NavbarMobile";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <GlobalStyle />
       <Navbar />
+      <NavbarMobile />
       <Layout>
         <Component {...pageProps} />
       </Layout>

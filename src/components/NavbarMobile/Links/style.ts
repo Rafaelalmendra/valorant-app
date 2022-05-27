@@ -5,16 +5,21 @@ interface ContainerProps {
 }
 
 export const LinksContainer = styled.ul`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-left: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: none;
 
   @media (max-width: 1280px) {
-    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--black-2);
+
+    gap: 1.5rem;
   }
 `;
 
@@ -22,6 +27,10 @@ export const Li = styled.li<ContainerProps>`
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 1rem;
+  font-size: 1.475rem;
   color: ${(props) => (props.active ? "var(--red)" : "var(--white)")};
+`;
+
+export const IconClose = styled.div`
+  color: var(--white);
 `;

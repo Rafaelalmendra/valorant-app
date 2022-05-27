@@ -1,4 +1,4 @@
-import { Home, Users, Map, Package, AlertCircle, Shield } from "react-feather";
+import { Home, Users, Map, Shield } from "react-feather";
 
 interface linksUrlProps {
   name: string;
