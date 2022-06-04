@@ -40,6 +40,15 @@ export default createGlobalStyle`
   img {
     width: 100%;
   }
+  ::-webkit-scrollbar {
+    width: 0.625rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color:  var(--white);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+  }
   .swiper-button-next,
   .swiper-button-prev {
     color: var(--black);
