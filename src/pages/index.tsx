@@ -1,9 +1,5 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
-
-//components
-import { Card } from "components/Card";
 
 //styles
 import { Container } from "../styles/home";
