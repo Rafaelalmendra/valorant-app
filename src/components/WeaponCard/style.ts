@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Card = styled.main`
+export const Card = styled.div`
   position: relative;
   width: 26.375rem;
   height: 19.25rem;
@@ -13,6 +13,14 @@ export const Card = styled.main`
   background: var(--red);
   box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.18);
   transition: transform 0.1s ease-in-out;
+
+  @media (max-width: 720px) {
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   h1 {
     color: var(--white);
@@ -46,6 +54,10 @@ export const Image = styled.div`
     max-width: 15.5rem;
     max-height: 8.75rem;
     margin-top: 1.9375rem;
+
+    @media (max-width: 720px) {
+      min-width: 100%;
+    }
   }
 `;
 export const CardInfos = styled.div`

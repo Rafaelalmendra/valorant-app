@@ -1,10 +1,9 @@
 //components
-import { Card } from "../Card";
 import AgentImage from "./AgentImage";
 import { Title, Divider, Subtitle, P } from "components/Typography";
 
 //styles
-import { CardInfos } from "./style";
+import { CardInfos, CardContainer } from "./style";
 
 interface AgentCardProps {
   name: string;
@@ -21,7 +20,7 @@ const AgentCard = ({
   role,
   description,
 }: AgentCardProps) => (
-  <Card>
+  <CardContainer>
     <AgentImage avatar={avatar} background={background} name={name} />
     <CardInfos>
       <Title style={{ color: "#FF4655" }}>{name}</Title>
@@ -31,7 +30,7 @@ const AgentCard = ({
       <Subtitle style={{ margin: "1rem 0 0.4rem 0" }}>biografia</Subtitle>
       <P>{description}</P>
     </CardInfos>
-  </Card>
+  </CardContainer>
 );
 
 export default AgentCard;

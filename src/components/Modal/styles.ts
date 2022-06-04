@@ -15,6 +15,11 @@ export const ModalCard = styled.div`
 
   background: #fafafa;
   border-radius: 8px;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+    height: 28rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -23,6 +28,10 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 1000px) {
+    padding: 1.5rem 2rem 0 2rem;
+  }
 
   p {
     font-family: "Rubik", sans-serif;
@@ -45,9 +54,18 @@ export const Header = styled.div`
 export const Content = styled.div`
   width: 100%;
   padding: 1rem;
+  text-align: center;
+
+  @media (max-width: 1000px) {
+    padding: 1rem 0 1rem 0;
+  }
 
   img {
     width: 450px;
+
+    @media (max-width: 1000px) {
+      width: 300px;
+    }
   }
 `;
 

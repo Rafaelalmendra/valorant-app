@@ -5,26 +5,20 @@ import Head from "next/head";
 //components
 import { Card } from "components/Card";
 
+//styles
+import { Container } from "../styles/home";
+
 const Home: NextPage = () => (
-  <Card>
+  <>
     <Head>
       <title>Valorant Guide | Home</title>
     </Head>
-    <Image
-      data-aos="fade-up"
-      src={"/images/logo.svg"}
-      alt={"Logo"}
-      width={466}
-      height={466}
-    />
-    <Image
-      data-aos="fade-left"
-      src={"/images/jett.svg"}
-      alt={"Jett imagem"}
-      width={466}
-      height={600}
-    />
-  </Card>
+
+    <Container>
+      <img src="/images/logo.svg" alt="Logo" />
+      <img src="/images/jett.svg" alt="Imagem da Jett" />
+    </Container>
+  </>
 );
 
 export default Home;

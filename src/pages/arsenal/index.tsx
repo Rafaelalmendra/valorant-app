@@ -7,7 +7,7 @@ import api from "lib/api";
 //components
 import Loading from "@/components/Loading";
 import WeaponCard from "@/components/WeaponCard";
-import { Divider, Title } from "@/components/Typography";
+import { Divider } from "@/components/Typography";
 
 //styles
 import { Card, WeaponsContainer } from "styles/weapons";
@@ -25,7 +25,6 @@ interface WeaponInfoProps {
 const Arsenal = () => {
   const [weapons, setWeapons] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
-  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     api
@@ -52,29 +51,24 @@ const Arsenal = () => {
       </Head>
       {isFetching && <Loading />}
       <Card>
-        <Title
+        <h2
           style={{
             color: "var(--black)",
             margin: "6.5625rem 0 0.4rem 0",
-            fontSize: "3.2rem",
           }}
         >
           ESCOLHA A ARMA E VEJA A SKIN
-        </Title>
+        </h2>
         <Divider style={{ width: "50%" }} />
         <WeaponsContainer>
           {weapons?.map((weapon: WeaponInfoProps) => (
-            <>
-              <div onClick={() => setModal(true)}>
-                <WeaponCard
-                  title={weapon.displayName}
-                  weaponImage={weapon.displayIcon}
-                  price={weapon.shopData?.cost}
-                  category={weapon.shopData?.categoryText}
-                  skinsImage={weapon.skins}
-                />
-              </div>
-            </>
+            <WeaponCard
+              title={weapon.displayName}
+              weaponImage={weapon.displayIcon}
+              price={weapon.shopData?.cost}
+              category={weapon.shopData?.categoryText}
+              skinsImage={weapon.skins}
+            />
           ))}
         </WeaponsContainer>
       </Card>

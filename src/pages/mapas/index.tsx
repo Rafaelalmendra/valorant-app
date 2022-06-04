@@ -13,7 +13,7 @@ import { Divider, Title } from "components/Typography";
 import Loading from "components/Loading";
 
 //styles
-import { Background } from "../../styles/maps";
+import { Background, BackgroundImage } from "../../styles/maps";
 
 interface MapProps {
   splash: string;
@@ -52,9 +52,19 @@ const Mapas = () => {
         {maps.map((map: MapProps) => (
           <SwiperSlide key={map.uuid}>
             <Background>
-              <Title>{map.displayName}</Title>
-              <Divider style={{ width: "21.75rem" }} />
-              <img src={map.splash} alt="" />
+              <Title
+                style={{
+                  position: "relative",
+                  zIndex: "2",
+                }}
+              >
+                {map.displayName}
+              </Title>
+              <Divider
+                style={{ width: "21.75rem", position: "relative", zIndex: "2" }}
+              />
+              {/*  <img src={map.splash} alt="" />*/}
+              <BackgroundImage image={map.splash} />
             </Background>
           </SwiperSlide>
         ))}

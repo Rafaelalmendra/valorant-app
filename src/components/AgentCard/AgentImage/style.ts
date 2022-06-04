@@ -13,6 +13,17 @@ const Images = styled.div`
       width: 26rem;
       height: 44rem;
     }
+
+    @media (max-width: 920px) {
+      height: 30rem;
+      width: 22rem;
+    }
+
+    @media (max-width: 720px) {
+      margin-top: 3rem;
+      height: 30rem;
+      width: 22rem;
+    }
   }
 
   img:last-child {
@@ -21,6 +32,10 @@ const Images = styled.div`
 
     width: 30%;
     left: 5rem;
+
+    @media (max-width: 920px) {
+      display: none;
+    }
   }
 `;
 

@@ -23,6 +23,7 @@ const Links = ({ ...props }) => {
         <Link href={link.url} key={link.id}>
           <a>
             <Li
+              {...props}
               key={link.id}
               active={router.pathname === link.url ? "active" : ""}
             >
