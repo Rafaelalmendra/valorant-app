@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://valorant-guide.vercel.app/" target="_blank">
+  <a href="https://valorant-guide-app.netlify.app/" target="_blank">
     🌐 click here to access the deploy
   </a>
 </p>
